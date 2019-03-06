@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phone Directory</title>
+	<link rel="stylesheet" type="text/css" href="assets/pd.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div id="container" ng-app="">
+		<h1>Phone Directory</h1>
+		<form id="myForm" name="contactinfo" onsubmit="return validateForm()">
+		  <div >
+		  <h3>First name: {{name}}</h3>
+		  <input type="text" name="cname"  ng-model="name">
+		  <!-- <span class="error"><p id="cname_error"></p></span>
+		   -->
+		  <h3 >Contact No.: {{mobile}}</h3>
+		  <input  type="text" name="cnumber" ng-model="mobile">
+<!-- 		  <span class="error"><p id="cnumber_error"></p></span> -->
+		  </div><br>
+		 
+		  <input id="add" type="submit" value="Add">
+		</form>
+
+<!-- 		<ul>
+			<li>Pushpak Dhakad 8888888889<span>X</span></li>
+			
+		</ul> -->
+		<table id="mytable" style="width:100%">
+		  <tr>
+		    <th>Name</th>
+		    <th>Contact</th> 
+		    <th>Handle</th>
+		  </tr>
+		  <tr>
+		    <td>Jill</td>
+		    <td>988758659</td> 
+		    <td><span id="delete">Delete</span></td>
+		  </tr>
+		  <tr>
+		    <td>Jill</td>
+		    <td>988758659</td> 
+		    <td><span id="delete">Delete</span></td>
+		  </tr>			  
+		</table>
+		<script type="text/javascript" src="assets/pd.js"></script>
+	</div>
+</body>
+</html>
